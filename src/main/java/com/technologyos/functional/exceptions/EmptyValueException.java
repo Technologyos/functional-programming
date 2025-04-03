@@ -1,4 +1,4 @@
-package com.technologyos.functional.utils;
+package com.technologyos.functional.exceptions;
 
 public class EmptyValueException extends IllegalArgumentException {
    public EmptyValueException(){}
