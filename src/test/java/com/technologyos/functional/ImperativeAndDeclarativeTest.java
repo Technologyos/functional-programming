@@ -1,6 +1,6 @@
-package com.developer.jauregui.functional;
+package com.technologyos.functional;
 
-import com.developer.jauregui.functional.moduls.User;
+import com.technologyos.functional.moduls.User;
 import org.junit.Test;
 
 import java.util.Arrays;
