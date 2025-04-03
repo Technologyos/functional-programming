@@ -1,12 +1,13 @@
 package com.technologyos.functional;
 
-import com.technologyos.functional.moduls.User;
-import org.junit.Test;
+import com.technologyos.functional.fundamentals.ImperativeAndDeclarative;
+import com.technologyos.functional.models.User;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class ImperativeAndDeclarativeTest {
 
