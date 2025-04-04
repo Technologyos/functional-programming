@@ -1,4 +1,4 @@
-package com.technologyos.functional.moduls;
+package com.technologyos.functional.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
