@@ -9,4 +9,6 @@ public class Phone {
    private String country;
    private char[] countryCode;
    private char[] digits;
+
+   public Phone(String phoneString) {}
 }
