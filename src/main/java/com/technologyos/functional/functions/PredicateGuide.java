@@ -1,5 +1,7 @@
 package com.technologyos.functional.functions;
 
+import com.technologyos.functional.fundamentals.Functional;
+
 import java.util.function.*;
 
 public class PredicateGuide {
@@ -15,18 +17,21 @@ public class PredicateGuide {
     * 5.- test(T t) : Evaluates this predicate on the given argument.boolean test(T t)
     */
    private static void checkPassword(String password) {
-      Predicate<String> isAllWhite = s -> s.trim().isEmpty();
-      Predicate<String> hasGoodLength = s -> s.length() > 8;
-      Predicate<String> hasAtLeastOneNumber = s -> s.matches("\\d+");
-      Predicate<String> hasAnUpperCaseLetter = s -> s.matches("[A-Z]+");
+      Predicate<String> notBlank = s -> !s.trim().isEmpty();
+      Predicate<String> hasMinLength = s -> s.length() >= 8;
+      Predicate<String> hasNumber = s -> s.matches(".*\\d.*");
+      Predicate<String> hasUpperCase = s -> s.matches(".*[A-Z].*");
 
-      Predicate<String> isAValidPassword = s ->
-         !isAllWhite.test(s)
-            && hasGoodLength.test(s)
-            && hasAtLeastOneNumber.test(s)
-            && hasAnUpperCaseLetter.test(s);
+      Predicate<String> isValidPassword = notBlank
+         .and(hasMinLength)
+         .and(hasNumber)
+         .and(hasUpperCase);
 
-      isAValidPassword.test(password);
+      if (isValidPassword.test(password)) {
+         System.out.println("Password is valid.");
+      } else {
+         System.out.println("Password is invalid.");
+      }
    }
 
    private static boolean validatePasswordSimplified(String password){
@@ -44,16 +49,60 @@ public class PredicateGuide {
       BiPredicate<String, String> isXLargerThanY = (x, y) -> x.length() > y.length();
 
       isXLargerThanY.test("Lobo", "Perrito"); // False
+      isXLargerThanY.test("MyText", "Text"); // TRUE
    }
 
    private static void predicateMethods(){
-      Predicate<String> isAllWhite = s -> s.trim().isEmpty();
-      System.out.println(isAllWhite.negate());
-      //Predicate.not(String::isEmpty);
+      Predicate<String> isBlank = s -> s.trim().isEmpty();
+      Predicate<String> isNotBlank = isBlank.negate();
 
-      boolean flag = isAllWhite.or(s-> s.equals("")).test("hello world");
+      System.out.println(isNotBlank.test("  ")); // false
+      System.out.println(isNotBlank.test("Java")); // true
 
-      Predicate<String> hasGoodLength = s -> s.length() > 8;
-      boolean flag2 = hasGoodLength.and(s-> s.length() < 100).test("hello");
+      Predicate<String> endsWithPDF = s -> s.endsWith(".pdf");
+      Predicate<String> endsWithDoc = s -> s.endsWith(".doc");
+
+      Predicate<String> isDocument = endsWithPDF.or(endsWithDoc);
+
+      System.out.println(isDocument.test("resume.pdf")); // true
+      System.out.println(isDocument.test("notes.doc"));  // true
+      System.out.println(isDocument.test("image.png"));  // false
+
+      Predicate<String> hasLength = s -> s.length() >= 8;
+      Predicate<String> containsAtSymbol = s -> s.contains("@");
+
+      Predicate<String> validEmail = hasLength.and(containsAtSymbol);
+
+      System.out.println(validEmail.test("user@example.com")); // true
+      System.out.println(validEmail.test("user.com"));         // false
+
+      Predicate<String> isAdmin = Predicate.isEqual("admin");
+
+      System.out.println(isAdmin.test("admin")); // true
+      System.out.println(isAdmin.test("user"));  // false
+   }
+
+   private void validateNumbers(){
+      Functional<Integer> validate = i -> i < 0;
+      System.out.println("Is Negative" + validate.isNegative(-1));
+      System.out.println("Is Negative" + validate.isNegative(10));
+
+      IntPredicate intPredicate = i -> i < 0;
+      System.out.println("Is Negative" + intPredicate.test(-1));
+      System.out.println("Is Negative" + intPredicate.test(10));
+
+      int x = 4;
+      System.out.println("Is" +x+ "even? "+ check(x,  n -> n % 2 == 0));
+      x = 7;
+      System.out.println("Is" +x+ "even? "+ check(x,  n -> n % 2 == 0));
+
+      String name = "Jose Armando";
+      System.out.println("Does" +name+ "start with A"+ check(name, s -> s.startsWith("A")));
+      name = "Armando";
+      System.out.println("Does" +name+ "start with A"+ check(name, s -> s.startsWith("A")));
+   }
+
+   public static <T> boolean check(T t, Predicate<T> validation){
+      return validation.test(t);
    }
 }
