@@ -19,7 +19,7 @@ public class StreamListeners {
        */
 
       Stream<String> coursesStream = Stream.of("Java", "Functional");
-      coursesStream.forEach(course -> System.out.println("Platzi course about: " + course));
+      coursesStream.forEach(course -> System.out.println("Course about: " + course));
 
       /*
        * These lambdas or functions we attach to streams to process data
