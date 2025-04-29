@@ -34,7 +34,7 @@ public class StreamsAndIterables {
        */
       for (String name : namesList) {
          if (name != null && !name.isEmpty()) {
-            // Perform some operation...
+            System.out.println("Do something!");
          }
       }
 
