@@ -1,6 +1,5 @@
-package com.technologyos.functional;
+package com.technologyos.functional.fundamentals;
 
-import com.technologyos.functional.fundamentals.ImperativeAndDeclarative;
 import com.technologyos.functional.models.User;
 import org.junit.jupiter.api.Test;
 

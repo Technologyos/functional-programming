@@ -16,7 +16,7 @@ class ImmutableUserTest {
          "28", "my_email@gmail.com", Arrays.asList("Juan", "Andrea", "Patricia"));
 
       assertIterableEquals(Arrays.asList("Juan", "Andrea", "Patricia"), immutableUser.getFriends());
-      
+
       List<String> friends = new ArrayList<>(immutableUser.getFriends());
       friends.clear();
       friends.add("Carmen");
