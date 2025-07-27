@@ -1,15 +1,5 @@
 package com.technologyos.functional.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.ToString;
-
 import java.io.Serializable;
 
-@Getter
-@AllArgsConstructor
-@ToString
-public class User implements Serializable {
-   private final String name;
-   private final Integer age;
-}
+public record User(String name, Integer age) implements Serializable {}
