@@ -17,13 +17,13 @@ public class ImperativeAndDeclarative {
    public static List<User> printUsersWithAgeIsGreaterThanEighteenImperativeMethod(){
       List<User> newListOfUsers = new ArrayList<>();
       for(User user: listOfUsers){
-         if(user.getAge() > 18){
+         if(user.age() > 18){
             newListOfUsers.add(user);
          }
       }
 
       for(User user: newListOfUsers){
-         System.out.println(user.getAge());
+         System.out.println(user.age());
       }
 
       return newListOfUsers;
@@ -31,7 +31,7 @@ public class ImperativeAndDeclarative {
 
    public static List<User> printUsersWithAgeIsGreaterThanEighteenDeclarativeMethod(){
       return listOfUsers.stream()
-         .filter(user -> user.getAge() > 18)
+         .filter(user -> user.age() > 18)
          .collect(Collectors.toList());
    }
 }
