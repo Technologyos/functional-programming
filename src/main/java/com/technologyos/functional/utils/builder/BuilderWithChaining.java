@@ -13,10 +13,10 @@ public class BuilderWithChaining {
    public BuilderWithChaining(String id) {
       checkStringField(id, "ID");
       this.id = id;
-      firstName = "";
-      lastName = "";
-      currentBalance = 0.0;
-      phone = null;
+      this.firstName = "";
+      this.lastName = "";
+      this.currentBalance = 0.0;
+      this.phone = null;
    }
 
    public BuilderWithChaining withFirstName(String firstName) {
@@ -44,11 +44,11 @@ public class BuilderWithChaining {
 
    public Account buildAccount() {
       return new Account(
-         id,
-         firstName,
-         lastName,
-         currentBalance,
-         phone
+         this.id,
+         this.firstName,
+         this.lastName,
+         this.currentBalance,
+         this.phone
       );
    }
 
