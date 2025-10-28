@@ -11,7 +11,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class MutableUser implements Serializable {
    private String fullName;
    private String age;
