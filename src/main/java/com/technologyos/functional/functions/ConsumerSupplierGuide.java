@@ -56,11 +56,10 @@ public class ConsumerSupplierGuide {
             .map(db -> db.select(sId, Account.class))
             .orElse(null);
 
-      // The main reason for using Suppliers is to decouple data retrieval logic
-      // from the business logic that uses the data.
-      // In functional programming, you often focus more on *how* to do something
-      // rather than *where* the data comes from.
-
+      //The main reason for using Suppliers is to decouple data retrieval logic
+      //from the business logic that uses the data.
+      //In functional programming, you often focus more on *how* to do something
+      //rather than *where* the data comes from.
       // And since a Supplier is just an object, it can be passed around and reused easily.
    }
 
