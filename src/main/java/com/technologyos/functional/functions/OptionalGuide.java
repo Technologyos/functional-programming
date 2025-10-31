@@ -98,7 +98,6 @@ public class OptionalGuide {
       logger.info("Bad usage: " + badResult);
    }
 
-
    /**
     * Returns an Optional name if age is 18 or older.
     */
