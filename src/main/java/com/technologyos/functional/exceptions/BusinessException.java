@@ -1,4 +1,4 @@
-package com.technologyos.unittest.exceptions;
+package com.technologyos.functional.exceptions;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
