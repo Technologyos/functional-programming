@@ -6,7 +6,6 @@ import lombok.ToString;
 import org.springframework.http.HttpStatus;
 
 @Getter
-@ToString
 @NoArgsConstructor
 public class BusinessException extends RuntimeException {
    private Long id;
