@@ -1,9 +1,6 @@
 package com.technologyos.functional.functions;
 
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class Lambda {
 
