@@ -1,6 +1,6 @@
 package com.technologyos.functional.functions;
 
-import com.technologyos.functional.fundamentals.Functional;
+import com.technologyos.functional.interfaces.Functional;
 
 import java.util.function.*;
 
