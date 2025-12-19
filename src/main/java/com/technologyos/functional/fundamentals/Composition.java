@@ -87,7 +87,6 @@ public class Composition {
       try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
          return reader.lines().collect(Collectors.toList());
       } catch (IOException e) {
-         e.printStackTrace();
          return Collections.emptyList();
       }
    }
