@@ -22,9 +22,7 @@ public class Composition {
     */
    private static final Function<File, List<String>> LINES_FROM_FILE = Composition::getLinesFromFile;
 
-   /**
-    * This function filters a list of strings, removing empty or null lines.
-    */
+   //This function filters a list of strings, removing empty or null lines.
    private static final Function<List<String>, List<String>> FILTER = list -> {
       List<String> resultList = new LinkedList<>();
       list.forEach(line -> addIfNotEmpty(resultList, line));
