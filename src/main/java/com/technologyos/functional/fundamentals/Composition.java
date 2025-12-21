@@ -11,9 +11,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Composition {
-   /**
-    * Since functions are types, we can store them as variables (function objects).
-    */
+   //Since functions are types, we can store them as variables (function objects).
    private static final Function<String, File> CREATE_FILE = File::new;
 
    /**
