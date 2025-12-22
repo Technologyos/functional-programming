@@ -67,9 +67,7 @@ public class Composition {
          .apply(pathToFile);
    }
 
-   /**
-    * Equivalent step-by-step version using `andThen`.
-    */
+   //Equivalent step-by-step version using `andThen`.
    static List<String> stepByStepWithAndThen(String pathToFile) {
       Function<String, List<String>> createFileAndGetLines = CREATE_FILE.andThen(LINES_FROM_FILE);
       Function<String, List<String>> fullPipeline = createFileAndGetLines.andThen(FILTER);
