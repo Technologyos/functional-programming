@@ -74,9 +74,7 @@ public class Composition {
       return fullPipeline.apply(pathToFile);
    }
 
-   /**
-    * Reads all lines from a file and returns them as a List of Strings.
-    */
+   //Reads all lines from a file and returns them as a List of Strings.
    private static List<String> getLinesFromFile(File file) {
       try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
          return reader.lines().collect(Collectors.toList());
@@ -85,18 +83,14 @@ public class Composition {
       }
    }
 
-   /**
-    * Adds the string to the list only if it is non-null, non-empty, and not just whitespace.
-    */
+   //Adds the string to the list only if it is non-null, non-empty, and not just whitespace.
    private static void addIfNotEmpty(List<String> list, String s) {
       if (s != null && !s.trim().isEmpty()) {
          list.add(s);
       }
    }
 
-   /**
-    * Sample main method to run the composed function.
-    */
+   //Sample main method to run the composed function.
    public static void main(String[] args) {
       String pathToFile = "/path/to/file.txt";
 
