@@ -61,24 +61,18 @@ public class StreamsAndIterables {
       // A simple stream with fixed data
       Stream<String> stringStream = Stream.of("Hello", "Goodbye");
 
-      /*
-       * You can even create streams from external sources, like user input.
-       */
+      //You can even create streams from external sources, like user input.
       BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
       Stream<String> bufferStream = in.lines(); // Stream of user input lines
 
-      /*
-       * Very commonly, we create streams from existing collections:
-       */
+      //Very commonly, we create streams from existing collections:
       List<String> coolNames = Utils.getListOf("Armando", "Miriam", "Elizabeth", "Jaime");
       Stream<String> coolNamesStream = coolNames.stream();
 
       Set<String> courses = new HashSet<>(coolNames);
       Stream<String> coursesStream = courses.stream();
 
-      /*
-       * Streams can also be generated dynamically, for example, by functions:
-       */
+      //Streams can also be generated dynamically, for example, by functions:
       AtomicInteger counter = new AtomicInteger();
       Stream<Integer> countingStream = Stream.generate(counter::getAndIncrement);
 
