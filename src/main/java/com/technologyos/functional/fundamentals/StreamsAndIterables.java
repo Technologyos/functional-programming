@@ -85,5 +85,4 @@ public class StreamsAndIterables {
       // Parallel processing will become really interesting when we start
       // applying operations like filter, map, reduce, etc.
    }
-
 }
