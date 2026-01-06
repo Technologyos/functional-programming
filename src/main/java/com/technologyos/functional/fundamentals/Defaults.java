@@ -42,7 +42,6 @@ public class Defaults {
 
    /**
     * Another example of a functional interface, this time using a static utility method.
-    *
     * Static methods in interfaces are commonly used for helper logic related to the interface's domain.
     */
    @FunctionalInterface
