@@ -74,9 +74,7 @@ public class SingleAbstractMethod {
       int someWeirdNameForAMethod(String s, int x, Scanner sc, List<Double> values);
    }
 
-   /**
-    * Here's how you can use a complex SAM interface with a lambda.
-    */
+   // Here's how you can use a complex SAM interface with a lambda.
    public static void somethingCalling() {
       OverComplicatedSAM stillAFunction = (s, x, sc, list) -> {
          System.out.println("Received: " + s + ", " + x);
