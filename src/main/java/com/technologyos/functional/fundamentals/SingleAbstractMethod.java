@@ -81,7 +81,6 @@ public class SingleAbstractMethod {
          return list.size(); // Just returning the size for demo purposes
       };
 
-      // Example usage
       int result = stillAFunction.someWeirdNameForAMethod("Hello", 5, new Scanner(System.in), List.of(1.0, 2.0));
       System.out.println("Result: " + result); // Output: Result: 2
    }
