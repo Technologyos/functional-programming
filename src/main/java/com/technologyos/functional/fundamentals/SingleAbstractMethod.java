@@ -48,17 +48,13 @@ public class SingleAbstractMethod {
       String getSubText();
    }
 
-   /**
-    * You can create your own functional interfaces with parameters and use them as functions.
-    */
+   //You can create your own functional interfaces with parameters and use them as functions.
    @FunctionalInterface
    interface MySAMInterfaceIsAlsoAFunction {
       String someMethod(int x);
    }
 
-   /**
-    * Functional interfaces can be implemented using lambda expressions.
-    */
+   // Functional interfaces can be implemented using lambda expressions.
    private static void fooSAM() {
       // Lambda for a SAM interface with one int parameter
       MySAMInterfaceIsAlsoAFunction myFunction = x -> "Result: " + x;
