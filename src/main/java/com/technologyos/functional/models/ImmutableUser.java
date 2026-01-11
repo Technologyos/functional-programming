@@ -13,7 +13,7 @@ import java.util.List;
  */
 public record ImmutableUser(String fullName, String age, String email, List<String> friends) implements Serializable {
    @Override
-   public final List<String> friends() {
+   public List<String> friends() {
       return new LinkedList<>(friends);
    }
 }
