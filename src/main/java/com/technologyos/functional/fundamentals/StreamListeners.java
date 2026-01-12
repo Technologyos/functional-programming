@@ -40,7 +40,6 @@ public class StreamListeners {
       // Filter only even numbers produced by the stream
       Stream<Integer> evens = countingStream.filter(i -> i % 2 == 0);
 
-      // Or square each number
       Stream<Integer> squared = countingStream.map(i -> i * i);
 
       /*
