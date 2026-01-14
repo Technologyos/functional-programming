@@ -92,7 +92,7 @@ public class Partial {
       public DataBaseConnection(DBConfiguration dbConfiguration) {}
 
       public QueryResult executeQuery(Query query) {
-         return new QueryResult(); // simulate DB result
+         return new QueryResult();
       }
    }
 }
