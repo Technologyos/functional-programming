@@ -33,9 +33,7 @@ public class Partial {
    }
 
    static void ejemploDB(DBConfiguration connectionConf) {
-      /*
-       * Simulating a database operation that takes configuration and a query.
-       */
+      //Simulating a database operation that takes configuration and a query.
       BiFunction<DBConfiguration, Query, QueryResult> biDB = (conf, query) ->
          new DataBaseConnection(conf).executeQuery(query);
 
