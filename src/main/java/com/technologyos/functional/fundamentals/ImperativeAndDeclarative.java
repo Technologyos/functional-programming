@@ -25,7 +25,6 @@ public class ImperativeAndDeclarative {
       for(User user: newListOfUsers){
          System.out.println(user.age());
       }
-
       return newListOfUsers;
    }
 
