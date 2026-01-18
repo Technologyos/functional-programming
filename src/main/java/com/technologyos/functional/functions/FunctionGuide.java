@@ -27,9 +27,7 @@ public class FunctionGuide {
       someFunction.apply(null); // For now it returns null
    }
 
-   /**
-    * Let's see a simple example: a function that checks if a number is even.
-    */
+   // Let's see a simple example: a function that checks if a number is even.
    private static void functionExample() {
       Function<Integer, Boolean> isEven = new Function<>() {
          @Override
