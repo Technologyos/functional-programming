@@ -36,7 +36,6 @@ public class FunctionGuide {
          }
       };
 
-      // Using the function
       System.out.println(isEven.apply(2));    // true
       System.out.println(isEven.apply(25));   // false
    }
@@ -75,9 +74,7 @@ public class FunctionGuide {
       System.out.println(multiplyXByY.apply(9).apply(8)); // Outputs: 72
    }
 
-   /**
-    * Reusable function to check if a number is even
-    */
+   // Reusable function to check if a number is even
    public static boolean isEven(int number) {
       Function<Integer, Boolean> isEven = n -> n % 2 == 0;
       return isEven.apply(number);
