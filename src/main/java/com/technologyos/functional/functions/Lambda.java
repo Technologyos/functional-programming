@@ -40,9 +40,7 @@ public class Lambda {
       System.out.println(composed.apply("   wow   ")); // Output: WOW!!!
    }
 
-   /**
-    * Demonstrates BiFunction usage — functions that take two arguments.
-    */
+   // Demonstrates BiFunction usage — functions that take two arguments.
    private static void biFunctionExamples() {
       // A function that adds the lengths of two strings
       BiFunction<String, String, Integer> lengthAdder = (s1, s2) -> s1.length() + s2.length();
@@ -57,9 +55,7 @@ public class Lambda {
       System.out.println(mergeWords.apply("Spring", "Angular")); // "Spring & Angular"
    }
 
-   /**
-    * Consumer represents an operation that takes one input and returns nothing.
-    */
+   //Consumer represents an operation that takes one input and returns nothing.
    private static void consumerExamples() {
       Consumer<String> print = s -> System.out.println("Message: " + s);
       print.accept("Hello, World!");
@@ -77,9 +73,7 @@ public class Lambda {
       detailedLogger.accept("My log message");
    }
 
-   /**
-    * Supplier provides a result without taking any arguments.
-    */
+   // Supplier provides a result without taking any arguments.
    private static void supplierExamples() {
       Supplier<String> helloSupplier = () -> "Hello, Functional World!";
       System.out.println(helloSupplier.get());
