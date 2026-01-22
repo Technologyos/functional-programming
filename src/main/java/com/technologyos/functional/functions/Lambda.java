@@ -23,9 +23,7 @@ public class Lambda {
       System.out.println(blockFunction.apply("   hello   "));
    }
 
-   /**
-    * A more complex example showing how to chain functions using `andThen` and `compose`
-    */
+   //A more complex example showing how to chain functions using `andThen` and `compose`
    private static void extendedFunctionExample() {
       Function<String, String> trim = String::trim;
       Function<String, String> toUpper = String::toUpperCase;
