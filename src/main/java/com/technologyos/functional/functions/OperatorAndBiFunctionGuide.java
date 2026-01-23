@@ -26,9 +26,7 @@ public class OperatorAndBiFunctionGuide {
       System.out.println(shout.apply("hello")); // HELLO!
    }
 
-   /**
-    * Demonstrates BiFunction, which is a function that accepts two different input types and produces a result.
-    */
+   // Demonstrates BiFunction, which is a function that accepts two different input types and produces a result.
    public static void biFunctionDemo() {
       BiFunction<Integer, Integer, Integer> sum = Integer::sum;
       BiFunction<String, Integer, String> leftPad = (s, width) -> String.format("%" + width + "s", s);
