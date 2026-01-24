@@ -39,9 +39,7 @@ public class OperatorAndBiFunctionGuide {
       System.out.println(formatPerson.apply("Alice", 30)); // Alice is 30 years old.
    }
 
-   /**
-    * Demonstrates BinaryOperator, which is a special case of BiFunction where all types are the same.
-    */
+   // Demonstrates BinaryOperator, which is a special case of BiFunction where all types are the same.
    public static void binaryOperatorDemo() {
       BinaryOperator<Integer> multiply = (a, b) -> a * b;
       BinaryOperator<String> concatWithSpace = (s1, s2) -> s1 + " " + s2;
