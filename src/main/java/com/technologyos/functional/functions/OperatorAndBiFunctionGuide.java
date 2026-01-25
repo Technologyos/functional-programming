@@ -18,7 +18,6 @@ public class OperatorAndBiFunctionGuide {
       System.out.println(square.apply(5)); // 25
       System.out.println(quoteText.apply("Focus is the key to mastery")); // "Focus is the key to mastery"
 
-      // More examples:
       UnaryOperator<String> toUpper = String::toUpperCase;
       UnaryOperator<String> addExclamation = s -> s + "!";
       Function<String, String> shout = toUpper.andThen(addExclamation);
