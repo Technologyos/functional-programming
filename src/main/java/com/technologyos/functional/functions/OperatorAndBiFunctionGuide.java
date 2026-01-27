@@ -46,7 +46,7 @@ public class OperatorAndBiFunctionGuide {
       System.out.println(multiply.apply(4, 5)); // 20
       System.out.println(concatWithSpace.apply("Functional", "Programming")); // Functional Programming
 
-      // Extra example: finding the longer string
+      // Finding the longer string
       BinaryOperator<String> longest = BinaryOperator.maxBy((s1, s2) -> Integer.compare(s1.length(), s2.length()));
       System.out.println(longest.apply("apple", "watermelon")); // watermelon
    }
