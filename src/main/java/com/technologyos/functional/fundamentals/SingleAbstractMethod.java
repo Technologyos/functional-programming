@@ -74,7 +74,7 @@ public class SingleAbstractMethod {
    public static void somethingCalling() {
       OverComplicatedSAM stillAFunction = (s, x, sc, list) -> {
          System.out.println("Received: " + s + ", " + x);
-         return list.size(); // Just returning the size for demo purposes
+         return list.size();
       };
 
       int result = stillAFunction.someWeirdNameForAMethod("Hello", 5, new Scanner(System.in), List.of(1.0, 2.0));
