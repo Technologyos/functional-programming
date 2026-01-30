@@ -41,7 +41,6 @@ public class Inference {
          .forEach(System.out::println);
    }
 
-   // Returns a list of integers
    private static List<Integer> getNumbers() {
       return Arrays.asList(1, 10, 11, 100, 1001, 1010, 1100, 1111);
    }
