@@ -45,7 +45,6 @@ public class Inference {
       return Arrays.asList(1, 10, 11, 100, 1001, 1010, 1100, 1111);
    }
 
-   // Converts the list to a Stream for functional operations
    private static Stream<Integer> getOperable(List<Integer> list) {
       return list.stream();
    }
