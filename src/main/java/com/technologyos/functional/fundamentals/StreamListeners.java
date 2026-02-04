@@ -12,7 +12,6 @@ public class StreamListeners {
 
       /*
        * Streams in Java are "self-iterating".
-       * So... how do we extract and process the data?
        *
        * It's simple — the Stream API is functional and allows passing in
        * `Suppliers`, `Consumers`, `Predicates`, and lambdas in general.
