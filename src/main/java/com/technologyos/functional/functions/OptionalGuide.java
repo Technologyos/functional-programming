@@ -98,9 +98,6 @@ public class OptionalGuide {
       logger.info("Bad usage: " + badResult);
    }
 
-   /**
-    * Returns an Optional name if age is 18 or older.
-    */
    private Optional<String> getNameByAge(int age) {
       if (age < 18) return Optional.empty();
       return Optional.of("Hello World");
