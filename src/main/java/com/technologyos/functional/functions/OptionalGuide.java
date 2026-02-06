@@ -103,9 +103,7 @@ public class OptionalGuide {
       return Optional.of("Hello World");
    }
 
-   /**
-    * Traditional null-returning method.
-    */
+   // Traditional null-returning method.
    private String getNameTraditional(int age) {
       if (age < 18) return null;
       return "Hello World";
