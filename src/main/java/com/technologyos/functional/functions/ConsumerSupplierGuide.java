@@ -27,8 +27,6 @@ public class ConsumerSupplierGuide {
    }
 
    private static void saveAccountTo(Account account, Consumer<Account> saveAction) {
-      // Perform validation before saving
-
       // Save the account using the given action
       saveAction.accept(account);
    }
