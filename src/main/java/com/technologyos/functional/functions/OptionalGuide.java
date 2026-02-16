@@ -109,9 +109,7 @@ public class OptionalGuide {
       return "Hello World";
    }
 
-   /**
-    * Builds a formatted name if the age condition is met, or null otherwise.
-    */
+   // Builds a formatted name if the age condition is met, or null otherwise.
    private String buildName(int age, String name) {
       if (age > 18) {
          return "Your name is: " + name + " and your age is " + age;
