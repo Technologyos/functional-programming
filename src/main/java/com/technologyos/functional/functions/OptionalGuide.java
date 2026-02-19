@@ -117,9 +117,7 @@ public class OptionalGuide {
       return null;
    }
 
-   /**
-    * Simulates a fallback action when no value is present.
-    */
+   // Simulates a fallback action when no value is present.
    private String getDefaultName() {
       return "Default Name";
    }
