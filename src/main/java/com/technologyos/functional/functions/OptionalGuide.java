@@ -123,7 +123,7 @@ public class OptionalGuide {
    }
 
    private String getNameFromService() {
-      return null; // Simulate external service
+      return null;
    }
 
    private Optional<String> getOptionalName() {
