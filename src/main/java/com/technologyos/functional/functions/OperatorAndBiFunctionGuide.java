@@ -16,7 +16,7 @@ public class OperatorAndBiFunctionGuide {
       UnaryOperator<String> quoteText = s -> "\"" + s + "\"";
 
       System.out.println(square.apply(5)); // 25
-      System.out.println(quoteText.apply("Focus is the key to mastery")); // "Focus is the key to mastery"
+      System.out.println(quoteText.apply("Focus is the key to mastery"));
 
       UnaryOperator<String> toUpper = String::toUpperCase;
       UnaryOperator<String> addExclamation = s -> s + "!";
