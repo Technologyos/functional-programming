@@ -6,7 +6,6 @@ import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class OperatorAndBiFunctionGuide {
-
    /**
     * Demonstrates the use of UnaryOperator and shows that it’s a special case of Function<T, T>,
     * meaning it takes a value of type T and returns the same type.
